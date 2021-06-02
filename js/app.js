@@ -199,30 +199,32 @@ function addNewBranch(event){
   // Branch.renderheader();
   Branch.renderbody();
   // Branch.renderfooter();
+  // let querySelect().lastChild;
 }
+function myFunction() {
+  let list = document.getElementById('salamonForm').lastChild.innerHTML;
+  document.getElementById('Branch').innerHTML = list;
+}
+myFunction();
+
+
 function addRow(){
-  
+  let location =document.getElementById('location').value;
+  let min=document.getElementById('min').value;
+  let max=document.getElementById('max').value;
+  let Average=document.getElementById('Average').value;
+  let table =document.getElementsByTagNameNS('table','cookies')[6];
+  let newRow =table.insertRow(6);
+  let cel1=newRow.insertCell(0);
+  let cel2=newRow.insertCell(1);
+  let cel3=newRow.insertCell(2);
+  let cel4=newRow.insertCell(2);
+  cel1.innerHTML =location;
+  cel2.innerHTML=min;
+  cel3.innerHTML=max;
+  cel4.innerHTML=Average;
 }
 addRow();
-
-
-// function addRow(){
-//   let location =document.getElementById('location').value;
-//   let min=document.getElementById('min').value;
-//   let max=document.getElementById('max').value;
-//   let Average=document.getElementById('Average').value;
-//   // let table =document.getElementsByTagNameNS('table')[6];
-//   let newRow =table.insertRow(6);
-//   let cel1=newRow.insertCell(0);
-//   let cel2=newRow.insertCell(1);
-//   let cel3=newRow.insertCell(2);
-//   let cel4=newRow.insertCell(2);
-//   cel1.innerHTML =location;
-//   cel2.innerHTML=min;
-//   cel3.innerHTML=max;
-//   cel4.innerHTML=Average;
-// }
-// addRow();
 
 // addNewBranch();
 
