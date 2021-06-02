@@ -91,7 +91,6 @@ Locations.prototype.renderbody=function(){
   Locations.prototype.renderfooter=function(){
     let thirdRow=document.createElement('tr');
     table.appendChild(thirdRow);
-
     let total=document.createElement('td');
     thirdRow.appendChild(total);
     total.textContent='total';
@@ -104,7 +103,6 @@ Locations.prototype.renderbody=function(){
       }
       tdEl3.textContent=Sumation;
     }
-
   };
 //   let h2El = document.createElement('h2');
 //   globVar.appendChild(h2El);
@@ -184,6 +182,10 @@ function addNewBranch(event){
   event.preventDefault();
   console.log(event);
 
+  // let Row =document.createElement('tr');
+  // table.appendChild(Row);
+  // document.querySelector('form:last-child');
+
   let newLocation = event.target.location.value;
   console.log(newLocation);
   let newMin =Number(event.target.min.value);
@@ -201,6 +203,29 @@ function addNewBranch(event){
   Branch.renderbody();
   // Branch.renderfooter();
   // let querySelect().lastChild;
+  Branch.addNewBranch();
+
+  // Branch.prototype.renderfooter=function(){
+  //   let location =document.getElementById('location').value;
+  //   table.appendChild(location);
+  //   let min=document.getElementById('min').value;
+  //   table.appendChild(min);
+  //   let max=document.getElementById('max').value;
+  //   table.appendChild(max);
+  //   let Average=document.getElementById('Average').value;
+  //   table.appendChild(Average);
+  //   let table =document.getElementsByTagNameNS('table','cookies')[6];
+  //   let newRow =table.insertRow(6);
+  //   let cel1=newRow.insertCell(0);
+  //   let cel2=newRow.insertCell(1);
+  //   let cel3=newRow.insertCell(2);
+  //   let cel4=newRow.insertCell(2);
+  //   cel1.innerHTML =location;
+  //   cel2.innerHTML=min;
+  //   cel3.innerHTML=max;
+  //   cel4.innerHTML=Average;
+  // };
+  // Branch.renderfooter();
 }
 // function myFunction() {
 //   let list = document.getElementById('salamonForm').lastChild.innerHTML;
@@ -209,23 +234,7 @@ function addNewBranch(event){
 // myFunction();
 
 
-function addRow(){
-  let location =document.getElementById('location').value;
-  let min=document.getElementById('min').value;
-  let max=document.getElementById('max').value;
-  let Average=document.getElementById('Average').value;
-  let table =document.getElementsByTagNameNS('table','cookies')[6];
-  let newRow =table.insertRow(6);
-  let cel1=newRow.insertCell(0);
-  let cel2=newRow.insertCell(1);
-  let cel3=newRow.insertCell(2);
-  let cel4=newRow.insertCell(2);
-  cel1.innerHTML =location;
-  cel2.innerHTML=min;
-  cel3.innerHTML=max;
-  cel4.innerHTML=Average;
-}
-addRow();
+
 
 // addNewBranch();
 
