@@ -24,7 +24,7 @@ globVar.appendChild(table);
 // workHours();
 
 
-
+// let ArrOfLocations2=[];
 let ArrOfLocations =[];
 
 function Locations ( location ,min, max, averageCookie){
@@ -97,11 +97,9 @@ Locations.prototype.renderbody=function(){
     for (let i=0;i<this.sellCookies.length;i++) {
       let tdEl3=document.createElement('td');
       thirdRow.appendChild(tdEl3);
-
       let Sumation=0;
-      for (let y=0;y<4;y++) {
+      for (let y=0;y<5;y++) {
         Sumation=Sumation+ ArrOfLocations[y].sellCookies[i];
-
       }
       tdEl3.textContent=Sumation;
     }
@@ -124,41 +122,109 @@ let Tokyo = new Locations('Tokyo',3,24,1.2);
 let Dubai = new Locations('Dubai',11,38,3.7);
 let Paris = new Locations ('Paris',20,38,2.3);
 let Lima = new Locations('Lima',2,16,4.6);
+// function calling() {
+//   for (let y=0; y<ArrOfLocations2.length;y++){
+//     ArrOfLocations2[y].customerPerHour();
+//     ArrOfLocations2[y].sPerHour();
+//     ArrOfLocations2[y].totalcookies();
+//     ArrOfLocations2[y].renderheader();
+//     ArrOfLocations2[y].renderbody();
+//     ArrOfLocations2[y].renderfooter();
 
-Seattle.customerPerHour();
-Seattle.sPerHour();
-Seattle.totalcookies();
+//   }}
+// calling();
+// Seattle.customerPerHour();
+// Seattle.sPerHour();
+// Seattle.totalcookies();
+// Seattle.renderheader();
+// Seattle.renderbody();
+// // Seattle.renderfooter();
+// Tokyo.customerPerHour();
+// Tokyo.sPerHour();
+// Tokyo.totalcookies();
+// // Tokyo.renderheader();
+// Tokyo.renderbody();
+// // Tokyo.renderfooter();
+// Dubai.customerPerHour();
+// Dubai.sPerHour();
+// Dubai.totalcookies();
+// Dubai.renderbody();
+// // Dubai.renderfooter();
+// Paris.customerPerHour();
+// Paris.sPerHour();
+// Paris.totalcookies();
+// Paris.renderbody();
+// // Paris.renderfooter();
+
+// Lima.customerPerHour();
+// Lima.sPerHour();
+// Lima.totalcookies();
+// Lima.renderbody();
+// Lima.renderfooter();
 Seattle.renderheader();
-Seattle.renderbody();
-// Seattle.renderfooter();
-Tokyo.customerPerHour();
-Tokyo.sPerHour();
-Tokyo.totalcookies();
-// Tokyo.renderheader();
-Tokyo.renderbody();
+for(let i=0;i<ArrOfLocations.length;i++){
+  ArrOfLocations[i].customerPerHour();
+  ArrOfLocations[i].sPerHour();
+  ArrOfLocations[i].totalcookies();
+  ArrOfLocations[i].renderbody();
+
+}
+Seattle.renderfooter();
 // Tokyo.renderfooter();
-Dubai.customerPerHour();
-Dubai.sPerHour();
-Dubai.totalcookies();
-Dubai.renderbody();
 // Dubai.renderfooter();
-Paris.customerPerHour();
-Paris.sPerHour();
-Paris.totalcookies();
-Paris.renderbody();
 // Paris.renderfooter();
+// Lima.renderfooter();
 
-Lima.customerPerHour();
-Lima.sPerHour();
-Lima.totalcookies();
-Lima.renderbody();
-Lima.renderfooter();
+// let locationForm =document.getElementById('cookieStand');
+
+let cookieForm = document.getElementById('salamonForm');
+cookieForm.addEventListener('submit', addNewBranch);
+function addNewBranch(event){
+  event.preventDefault();
+  console.log(event);
+
+  let newLocation = event.target.location.value;
+  console.log(newLocation);
+  let newMin =Number(event.target.min.value);
+  console.log(newMin);
+  let newMax = Number(event.target.max.value);
+  console.log(newMax);
+  let newAverage=Number(event.target.Average.value);
+  console.log(newAverage);
+
+  let Branch = new Locations(newLocation,newMin,newMax,newAverage);
+  Branch.customerPerHour();
+  Branch.sPerHour();
+  Branch.totalcookies();
+  // Branch.renderheader();
+  Branch.renderbody();
+  // Branch.renderfooter();
+}
+function addRow(){
+  
+}
+addRow();
 
 
+// function addRow(){
+//   let location =document.getElementById('location').value;
+//   let min=document.getElementById('min').value;
+//   let max=document.getElementById('max').value;
+//   let Average=document.getElementById('Average').value;
+//   // let table =document.getElementsByTagNameNS('table')[6];
+//   let newRow =table.insertRow(6);
+//   let cel1=newRow.insertCell(0);
+//   let cel2=newRow.insertCell(1);
+//   let cel3=newRow.insertCell(2);
+//   let cel4=newRow.insertCell(2);
+//   cel1.innerHTML =location;
+//   cel2.innerHTML=min;
+//   cel3.innerHTML=max;
+//   cel4.innerHTML=Average;
+// }
+// addRow();
 
-
-
-
+// addNewBranch();
 
 
 
@@ -412,4 +478,3 @@ Lima.renderfooter();
 // LimaShop.sPerHour();
 // LimaShop.totalcookies();
 // LimaShop.render();
-
