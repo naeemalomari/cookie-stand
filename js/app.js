@@ -91,6 +91,7 @@ Locations.prototype.renderbody=function(){
   Locations.prototype.renderfooter=function(){
     let thirdRow=document.createElement('tr');
     table.appendChild(thirdRow);
+
     let total=document.createElement('td');
     thirdRow.appendChild(total);
     total.textContent='total';
@@ -201,11 +202,11 @@ function addNewBranch(event){
   // Branch.renderfooter();
   // let querySelect().lastChild;
 }
-function myFunction() {
-  let list = document.getElementById('salamonForm').lastChild.innerHTML;
-  document.getElementById('Branch').innerHTML = list;
-}
-myFunction();
+// function myFunction() {
+//   let list = document.getElementById('salamonForm').lastChild.innerHTML;
+//   document.getElementById('Branch').innerHTML = list;
+// }
+// myFunction();
 
 
 function addRow(){
