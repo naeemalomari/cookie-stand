@@ -168,7 +168,7 @@ for(let i=0;i<ArrOfLocations.length;i++){
   ArrOfLocations[i].renderbody();
 
 }
-Seattle.renderfooter();
+// Seattle.renderfooter();
 // Tokyo.renderfooter();
 // Dubai.renderfooter();
 // Paris.renderfooter();
@@ -196,6 +196,8 @@ function addNewBranch(event){
   console.log(newAverage);
 
   let Branch = new Locations(newLocation,newMin,newMax,newAverage);
+  // table.deleteRow(table.deleteRow(0));
+  table.deleteRow(table.rows.lenght-1);
   Branch.customerPerHour();
   Branch.sPerHour();
   Branch.totalcookies();
@@ -203,8 +205,8 @@ function addNewBranch(event){
   Branch.renderbody();
   // Branch.renderfooter();
   // let querySelect().lastChild;
-  Branch.addNewBranch();
 
+  Seattle.renderfooter();
   // Branch.prototype.renderfooter=function(){
   //   let location =document.getElementById('location').value;
   //   table.appendChild(location);
@@ -227,6 +229,7 @@ function addNewBranch(event){
   // };
   // Branch.renderfooter();
 }
+addNewBranch();
 // function myFunction() {
 //   let list = document.getElementById('salamonForm').lastChild.innerHTML;
 //   document.getElementById('Branch').innerHTML = list;
