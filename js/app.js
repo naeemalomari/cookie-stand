@@ -113,7 +113,7 @@ Locations.prototype.renderbody=function(){
 //     let liEL = document.createElement('li');
 //     ulEL.appendChild(liEL);
 //     liEL.textContent=`${dailyHours[j]} : ${this.sellCookies[j]}`;
-//   }
+//   }     
 };
 
 let Seattle = new Locations('Seattle',23,65,6.3);
